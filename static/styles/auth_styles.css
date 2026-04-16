@@ -1,0 +1,407 @@
+/* Authentication Forms Styles - Signup and Signin */
+
+/* Common Styles */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.signin-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.signup-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+.signin-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 550px;
+    width: 100%;
+}
+
+.auth-header {
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.auth-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.auth-header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.signup-header {
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.signup-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.signup-header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.signin-header {
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.signin-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.signin-header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.auth-body {
+    padding: 40px 30px;
+}
+
+.signup-body {
+    padding: 40px 30px;
+}
+
+.signin-body {
+    padding: 40px 30px;
+}
+
+/* Error Message Container */
+.error-message-container {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.error-message-container i {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.error-message-container p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #20d34a;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(32, 211, 74, 0.1);
+}
+
+.form-group i {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    color: #20d34a;
+    font-size: 18px;
+}
+
+/* Button Styles */
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 211, 74, 0.3);
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 211, 74, 0.3);
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #20d34a 0%, #283290 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.signin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 211, 74, 0.3);
+}
+
+/* Footer Styles */
+.auth-footer {
+    text-align: center;
+    padding: 0 30px 30px 30px;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #20d34a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.signup-footer {
+    text-align: center;
+    padding: 0 30px 30px 30px;
+    color: #666;
+}
+
+.signup-footer a {
+    color: #20d34a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+.signin-footer {
+    text-align: center;
+    padding: 0 30px 30px 30px;
+    color: #666;
+}
+
+.signin-footer a {
+    color: #20d34a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.signin .checkbox-group {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.signin .checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.checkbox-group label a {
+    color: #20d34a;
+    text-decoration: none;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #20d34a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .signup-container {
+        padding: 10px;
+    }
+
+    .signin-container {
+        padding: 10px;
+    }
+
+    .signup-card {
+        margin: 10px 0;
+    }
+
+    .signin-card {
+        margin: 10px 0;
+    }
+
+    .signup-header {
+        padding: 30px 20px;
+    }
+
+    .signin-header {
+        padding: 30px 20px;
+    }
+
+    .signup-body {
+        padding: 30px 20px;
+    }
+
+    .signin-body {
+        padding: 30px 20px;
+    }
+
+    .signin .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forgot-password {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+

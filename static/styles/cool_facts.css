@@ -1,0 +1,73 @@
+/* Cool Facts Section Styles */
+.medilife-cool-facts-area {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.single-cool-fact-area {
+    position: relative;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.single-cool-fact-area:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.single-cool-fact-area i {
+    font-size: 48px;
+    color: #20d34a;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.single-cool-fact-area h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #283290;
+    margin-bottom: 10px;
+}
+
+.single-cool-fact-area h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #696969;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.single-cool-fact-area p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+}
+
+.counter {
+    color: #20d34a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .medilife-cool-facts-area {
+        padding: 50px 0;
+    }
+
+    .single-cool-fact-area {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+
+    .single-cool-fact-area h2 {
+        font-size: 28px;
+    }
+
+    .single-cool-fact-area i {
+        font-size: 36px;
+    }
+}

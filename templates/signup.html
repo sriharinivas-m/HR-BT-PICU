@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sign Up - Heart Rate and Body Temperature Relationship in Children Admitted to PICU: A Machine Learning Approach</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Create your account to access heart rate and body temperature relationship analysis platform for PICU children">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../static/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/cool_facts.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/auth_styles.css">
+</head>
+<body>
+
+<div class="signup-container">
+    <div class="signup-card">
+        <div class="signup-header">
+            <h2><i class="fas fa-user-plus"></i> Create Account</h2>
+            <p>Join our platform for heart rate and body temperature relationship analysis in PICU children</p>
+        </div>
+
+        <div class="signup-body">
+            {% if message %}
+            <div class="error-message-container">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>{{ message }}</p>
+            </div>
+            {% endif %}
+
+            <form action="/signup" method="POST" id="signup_form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="username"><i class="fas fa-user"></i> User Name</label>
+                            <input type="text" id="username" name="user" placeholder="Enter your user name (min 6 characters)" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="fullname" name="name" placeholder="Enter your full name (min 3 letters)" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="contactno"><i class="fas fa-phone"></i> Mobile Number</label>
+                            <input type="tel" id="contactno" name="mobile" placeholder="Enter 10-digit mobile number (starts with 6-9)" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="password" name="password" placeholder="Min 8 chars, uppercase, lowercase, number" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="confirm_password"><i class="fas fa-lock"></i> Confirm Password</label>
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-btn signup-btn">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+
+            <div class="signup-footer">
+                <p>Already have an account? <a href="/signin">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jquery-3.2.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/plugins/greensock/TweenMax.min.js"></script>
+<script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../static/js/elements.js"></script>
+<script src="../static/js/custom.js"></script>
+<script>
+    // Password confirmation validation
+    document.getElementById('signup_form').addEventListener('submit', function(e) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm_password').value;
+        
+        if (password !== confirmPassword) {
+            e.preventDefault();
+            // Create error message container if it doesn't exist
+            var existingError = document.querySelector('.error-message-container');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            var errorContainer = document.createElement('div');
+            errorContainer.className = 'error-message-container';
+            errorContainer.innerHTML = '<i class="fas fa-exclamation-circle"></i><p>Passwords do not match. Please try again.</p>';
+            
+            var form = document.getElementById('signup_form');
+            form.parentNode.insertBefore(errorContainer, form);
+            
+            // Scroll to error
+            errorContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            return false;
+        }
+    });
+</script>
+</body>
+</html>

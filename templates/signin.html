@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sign In - Heart Rate and Body Temperature Relationship in Children Admitted to PICU: A Machine Learning Approach</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Sign in to access heart rate and body temperature relationship analysis platform for PICU children">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../static/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/cool_facts.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/auth_styles.css">
+</head>
+<body>
+
+<div class="signin-container">
+    <div class="signin-card signin">
+        <div class="signin-header">
+            <h2><i class="fas fa-sign-in-alt"></i> Welcome Back</h2>
+            <p>Sign in to access heart rate and body temperature relationship analysis</p>
+        </div>
+
+        <div class="signin-body">
+            {% if message %}
+            <div class="error-message-container">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>{{ message }}</p>
+            </div>
+            {% endif %}
+
+            <form action="/signin" method="POST" id="signin_form">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> User Name</label>
+                    <input type="text" id="username" name="user" placeholder="Enter your username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="auth-btn signin-btn">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+
+            <div class="signin-footer">
+                <p>Don't have an account? <a href="/signup">Create Account</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jquery-3.2.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/plugins/greensock/TweenMax.min.js"></script>
+<script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../static/js/elements.js"></script>
+<script src="../static/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+Dataset:  
+========
+
+1. Importing the packages
+2. Exploring the dataset
+	- HeartRate  Dataset
+3. Data Preprocessing
+	- Exclude Data From Patients Who Have Moved
+	- Normalize Body Temperature
+	- Exclude Data From Patients Undergoing Specific Medication Treatment
+	- Calculate Heart Rate Median
+	- Associate HR and BT Within 10 Minutes Window
+	- Exclude Extreme Values
+	- Group Data Per 1°C Body Temperature Range
+	- Keep Single Observation Per Patient Per Temperature Range
+4. Data Visualizations
+	- Body Temperature Range Distribution
+	- Heart Rate vs Body Temperature		
+	- Correlation Matrix
+5. Build the Regression models
+		- LinearRegression
+		- Multiple Linear Regression
+		- Polynomial Regressor
+		- SVM
+		- Statistical modeling
+		- Ordinary Least Squares
+		- Gradient Boosting
+		- Random Forest
+		- RNN
+		- LSTM
+		- MLP
+	Extension:
+		- XGBoost
+
+6. Training the model
+7. Comparing the models with mse, rmse, r2 score, Quantile Loss
+8. Comparison Graphs are generated with scores of all models.
+9. Save the best trained model
+10. Explainable AI (XAI) Visualizations
+	- Using LIME and SHAP
+
+Front-end:
+==========
+1. Frontend is developed with help of Flask Framework, along with Registration and Login setup with support of SQLite DB 
+2. For the frontend we used the data for prediction 
+3. User gives input as Feature Values 
+4. The given input is preprocessed for prediction 
+5. Trained model is used for prediction 
+6. Final outcome is displayed through frontend
+
+Extension:
+==========
+This study explores the non-linear relationship between heart rate, body temperature, and age in critically ill children using Gradient Boosting with Quantile Regression, achieving a quantile loss of 6.6 and demonstrating superior predictive accuracy over linear models for improved clinical decision-making in PICU settings.
+
+As an extension, a XGBoost-based model was implemented, further improving performance with a reduced quantile loss of 5.8, enhancing predictive accuracy for clinical decision-making in PICU settings.
+Additionally, we employed XAI techniques such as LIME and SHAP to explain the importance of feature values used in the predictions.
+
+Along with this extension we used Flask Framework for UI for user provides input for prediction using trained models for dataset.
+
+
+Note:
+------
+In the base paper, the authors compared model performance using quantile loss as the primary evaluation metric. Therefore, we also evaluated our model based on quantile loss rather than other regression metrics. Although we attempted to improve additional performance measures, the dataset used in the base paper is not publicly available, making it impossible to reproduce their results exactly. Nevertheless, when compared with other baseline models, our extended model demonstrates superior predictive performance.
